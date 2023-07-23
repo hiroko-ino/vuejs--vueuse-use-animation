@@ -36,6 +36,14 @@ const {
 </script>
 
 <template>
+  <div class="info">
+    startTime: {{ startTime }}<br>
+    currentTime: {{ currentTime }}<br>
+    playbackRate: {{ playbackRate }}<br>
+    playState: {{ playState }}<br>
+    replaceState: {{ replaceState }}<br>
+    pending: {{ pending }}
+  </div>
   <div class="wrapper">
     <div class="image">
       <img class="glass-shoes glass-shoes--base" :src="GlassShoes" alt="ガラスのシューズ">
@@ -45,6 +53,7 @@ const {
       <button class="buttons__button" @click="play">Play</button>
       <button class="buttons__button" @click="pause">Pause</button>
       <button class="buttons__button" @click="reverse">Reverse</button>
+      <button class="buttons__button" @click="finish">Finish</button>
       <button class="buttons__button" @click="cancel">Cancel</button>
     </div>
   </div>
@@ -101,5 +110,16 @@ body {
   border-radius: 8px;
   appearance: none;
   border: none;
+}
+
+.info {
+  position: fixed;
+  width: 350px;
+  top: 16px;
+  right: 16px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+  z-index: 50;
 }
 </style>
