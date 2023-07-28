@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, shallowRef } from 'vue'
+import { shallowRef } from 'vue'
 import { useAnimate, type MaybeElement } from '@vueuse/core'
 import GlassShoes from './assets/27161639_m.jpg'
 import GlassShoesFront from './assets/27161639_m_front.png'
